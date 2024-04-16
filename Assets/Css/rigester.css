@@ -1,0 +1,33 @@
+
+@import '../Css/login.css';
+
+
+.form_check {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.form_group input[type="radio"], .form_agree input[type=checkbox]{
+    transform: scale(1.23); 
+    margin-right: 10px; 
+    margin-top: 23px;
+  }
+.form_group span{
+    font-family: 'Noto Sans';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.form_name{
+   display: flex; 
+   gap: 30px;
+   justify-content:space-between;
+   text-align: center;
+}
+.form_group .form_agree span{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #6A983C;
+}
+

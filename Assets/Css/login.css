@@ -1,0 +1,70 @@
+@import '../Css/style.css';
+
+#form_login, #form_rigester{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 0 28px;
+}
+.form_content{
+    max-width: 400px;
+    width: 100%;
+}
+.form_group {
+    width: 100%;
+    text-align: left;   
+}
+.form_group .form_lable {
+    color: black;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3333333333;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+.form_group .form_input input{
+    width: 100%;
+    border-radius: 5px;
+    padding: 19px;
+    height: 55px;
+    border: 1px solid #858585;
+    transition: all 0.2s linear;
+}
+.form_input{
+    position: relative;
+}
+.form_input .form_input_img{
+    position: absolute;
+    padding: 17px;
+    height: 55px;
+    border-right: 1px solid #858585;
+}
+.form_group .form_input input{
+    /* padding-left: 70px; */
+    font-size: 16px;
+    font-weight: 500;
+}
+.form_group .form_input.has_icon input{
+    padding-left: 70px;
+}
+.btn-primary{
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 100px;
+    padding: 17px;
+    border-radius: 5px;
+    border: 1px solid #6A983C;
+    background-color: #6A983C;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    font-family: 'Noto Sans';
+    color: #FFFFFF;
+}
+ .form_input_error{
+    color: crimson;
+    font-size: 16px;
+   font-weight: 400;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rigester</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="./Assets/Css/fonts" href="">
+    <link rel="stylesheet" href="./Assets/Css/rigester.css">
+</head>
+
+<body>
+    <div class="header">
+        <p>エニタイムズ安全・安心ガイド</p>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="nav">
+                <ul class="nav_list">
+                    <li><a href="#">ログイン</a></li>
+                    <li><a href="#">新規登録</a></li>
+                    <li><a href="#">ご利用の流れ</a></li>
+                    <li><a href="#">マイページ</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <p class="logo_img">LOGO</p>
+            </div>
+            <form action="#" id="form_rigester">
+                <div class="form_content">
+                    <div class="form_group">
+                        <label for="email" class="form_lable">メールアドレス</label>
+                        <div class="form_input">
+                            <input type="text" name="email" id="email" />
+                            <small class="form_input_error"></small>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <label for="password" class="form_lable">パスワード（半角英数８桁以上）</label>
+                        <div class="form_input">
+                            <input type="password" name="password" id="password" />
+                            <small class="form_input_error"></small>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <label for="confirmPassword" class="form_lable">パスワード再確認</label>
+                        <div class="form_input">
+                            <input type="password" name="confirmPassword" id="confirmPassword" />
+                            <small class="form_input_error_confirm"></small>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <label for="nickname" class="form_lable">ニックネーム</label>
+                        <div class="form_input">
+                            <input type="text" name="nickname" id="nickname" />
+                            <small class="form_input_error"></small>
+                        </div>
+                    </div>
+                    <div class="form_check">
+                        <div class="form_group">
+                            <input type="radio" name="gender" value="male" checked />
+                            <span class="form_radio_name">Male</span>
+                        </div>
+                        <div class="form_group">
+                            <input type="radio" name="gender" value="female" />
+                            <span class="form_radio_name">Female</span>
+                        </div>
+                        <div class="form_group">
+                            <input type="radio" name="gender" value="other" />
+                            <span class="form_radio_name">Other</span>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <label for="province" class="form_lable">都道府県を選んでください）</label>
+                        <div class="form_input">
+                            <input type="text" name="province" id="province" />
+                            <small class="form_input_error"></small>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <label for="bird" class="form_lable">生年月日（年代のみ公開されます）</label>
+                        <div class="form_input">
+                            <input type="text" placeholder="例: 2000/01/01" name="bird" id="bird" />
+                            <small class="form_input_error"></small>
+                        </div>
+                    </div>
+                    <div class="form_name">
+                        <div class="form_group">
+                            <label for="lastName" class="form_lable">姓 (非公開)</label>
+                            <div class="form_input">
+                                <input type="text" name="lastName" id="lastName" />
+                                <small class="form_input_error"></small>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <label for="firstName" class="form_lable">名 (非公開)</label>
+                            <div class="form_input">
+                                <input type="text" name="firstName" id="firstName" />
+                                <small class="form_input_error"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <label for="phone" class="form_lable">Phone Number</label>
+                        <div class="form_input">
+                            <input type="text" name="phone" id="phone" />
+                            <small class="form_input_error"></small>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <div class="form_agree">
+                            <input type="checkbox" name="gender" value="other" />
+                            <span class="form_agree_desc">利用規約 と プライバシーポリシー</span>
+                        </div>
+                    </div>
+                    <button id="submitBtn" type="submit" class="btn-primary btn_rigester">
+                        同意して登録（無料）
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_collum">
+            <div class="footer_title">
+                <p>
+                    お問い合わせ
+                </p>
+            </div>
+            <div class="footer_content">
+                <p>ニュース</p>
+                <p>会社概</p>
+                <p>要利用規約</p>
+                <p>特定商取引に基づく表記</p>
+                <p>個人情報保護方針</p>
+            </div>
+        </div>
+        <div class="footer_collum">
+            <div class="footer_title">
+                <p>
+                    お問い合わせ
+                </p>
+            </div>
+            <div class="footer_content">
+                <p>報酬は仕事前に事務局に支払われ、評価・完了後に振り込まれます。</p>
+                <p>トラブルを避けるために、直接契約や金銭の手渡し、連絡
+                    先の交換はご遠慮いただいています。 必ずエニタイムズの
+                    チャット内でやりとりして下さい。 どうしても連絡先の交
+                    換が必要な場合、事務局までご連絡ください。
+                </p>
+
+            </div>
+        </div>
+        <div class="footer_collum">
+            <div class="footer_title">
+                <p>
+                    お問い合わせ
+                </p>
+            </div>
+            <div class="footer_content">
+                <p>
+                    お支払いは、クレジットカードまたはPayPal決済がご利用
+                    いただけます。 クレジットカードの場合は、 VISA,
+                    Master Card, JCBがご利用いただけます。 PayPalの場合
+                    は、 VISA, Master Card, AMEX, JCBがご利用いただけま
+                    す。 クレジットカードをお持ちでない方は事務局までご連
+                    絡ください。
+                </p>
+                <img src="./Assets/Img/sponsor.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/rigester.js"></script>
+
+</body>
+
+</html>

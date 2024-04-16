@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='ico/favicon.ico' rel='icon'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="./Assets/Css/fonts" href="">
+    <link rel="stylesheet" href="./Assets/Css/postlist.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="nav">
+                <ul class="nav_list">
+                    <li><a href="#">ログイン</a></li>
+                    <li><a href="#">新規登録</a></li>
+                    <li><a href="#">ご利用の流れ</a></li>
+                    <li><a href="#">マイページ</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <p class="logo_img">LOGO</p>
+            </div>
+
+
+            <div class="main_content">
+                <div class="main_content_top">
+                    <div class="post_sort">
+                        <label for="sort">Sắp xếp theo ngày tạo: </label>
+                        <select name="sort" id="sort">
+                            <option value="desc">Giảm dần</option>
+                            <option value="asc">Tăng dần</option>
+                        </select>
+                    </div>
+
+                    <div class="post_add">
+                        <button class="btn_add_post" id="btnAdd">
+                            <i class="fa-solid fa-plus"></i> <span>Thêm mới bài post</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="products" id="product_list_item">
+                    <!-- <div class="product_list_item">
+                        <div class="product_list_item_top">
+                            <div class="product_list_top_icon">
+                                <button id="btnEdit" type="button" class="btn_edit btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#editModal">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn_delete">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                            <div class="product_list_item_img">
+                                <img src="./Assets/Img/giay3.jpg" alt="">
+                            </div>
+                            <div class="product_list_item_name">
+                                <h2>Title</h2>
+                                <p>Giày thể thao Adidas Superstar, kiểu dáng retro, chất liệu da bền đẹp, đế giày chống
+                                    trượt, thích hợp cho đi bộ và các hoạt động thể thao nhẹ nhàng.</p>
+                            </div>
+                        </div>
+                        <div class="product_list_item_bootom">
+                            <span> Ngày đăng:</span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal_edit" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true" hidden>
+        <div class="modal_content">
+            <div class="modal_header">
+                <h2 class="modal-title" id="editModalLabel">Edit Product</h2>
+                <button type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal_body">
+                <label for="editImage">Image URL:</label>
+                <input type="text" id="editImage" class="form_control">
+                <label for="editTitle">Title:</label>
+                <input type="text" id="editTitle" class="form_control">
+                <label for="editDescription">Description:</label>
+                <textarea id="editDescription" class="form_control" rows="5" cols="50"></textarea>
+
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn btn-secondary" id="closebtn" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveChanges">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_delete" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true"
+        hidden>
+        <div class="modal_content">
+            <div class="modal_header">
+                <h2 class="modal-title" id="delete_ModalLabel">Delete Product</h2>
+                <button type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal_body">
+                <p>Bạn có chắc chắn muốn xóa bài post này</p>
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn btn-secondary" id="closebtn" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="deletebtn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal_add" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true" hidden>
+        <div class="modal_content">
+            <div class="modal_header">
+                <h2 class="modal-title" id="addModalLabel">ADD Post</h2>
+                <button type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal_body">
+                <label for="addImage">Image URL:</label>
+                <input type="text" id="addImage" class="form_control">
+                <label for="addTitle">Title:</label>
+                <input type="text" id="addTitle" class="form_control">
+                <label for="addDescription">Description:</label>
+                <textarea id="addDescription" class="form_control" rows="5" cols="50"></textarea>
+
+                <!-- <label for="addCreate">Create at:</label>
+                <input type="text" id="addCreate" class="form_control"> -->
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn btn-secondary" id="closebtn" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveChanges">Save</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/poslist.js"></script>
+    <!-- <script type="module" src="./js/data_postlist.js"></script> -->
+
+</body>
+
+</html>
